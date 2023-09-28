@@ -41,10 +41,27 @@ ol {
   font-style: normal;
 }
 .container {
-  width: 1158px;
+  min-width: 320px;
+  max-width: 428px;
+  padding: 0 16px;
   margin: 0 auto;
+  /* width: 1158px;
   padding: 0 15px;
-  align-items: center;
+  align-items: center; */
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 18px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
 }
 
 .visually-hidden {
@@ -205,23 +222,38 @@ ol {
   background-color: #404bbf;
 }
 /* ================FEATURES============== */
+/* Mobile */
 .features {
-  padding: 120px 0;
+  padding: 48px 0;
+}
+
+@media only screen and (min-width: 1158px) {
+  .features {
+    padding: 60px 0;
+  }
 }
 
 .feature-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  row-gap: 72px;
+  column-gap: 24px;
 }
 
-.feature-list.list {
-  gap: 24px;
+@media only screen and (min-width: 768px) {
+  .list-item-feature {
+    width: calc((100% - 24px) / 2);
+  }
 }
-.list-item-feature {
-  width: calc((100% - 72px) / 4);
+
+@media only screen and (min-width: 1158px) {
+  .list-item-feature {
+    width: calc((100% - 72px) / 4);
+  }
 }
+
 .feature-icon-container {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
@@ -229,23 +261,50 @@ ol {
   background-color: var(--logo-color-footer);
   height: 112px;
 }
+@media only screen and (min-width: 1158px) {
+  .feature-icon-container {
+    display: flex;
+  }
+}
+
 .list-title {
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2; /* 120% */
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
   letter-spacing: 0.02em;
   color: var(--text-color);
+  text-transform: capitalize;
+  text-align: center;
   margin-bottom: 8px;
 }
+@media only screen and (min-width: 768px) {
+  .list-title {
+    text-align: left;
+  }
+
+@media only screen and (min-width: 1158px) {
+  .list-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    
+  }
+}
 .list-text {
-  font-family: Roboto;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
   color: var(--contacts-color);
 }
+@media only screen and (min-width: 1158px) {
+  .list-text{
+ font-weight: 400;
+  }
+  
+}
+
+
 /* =====================DOING=================== */
 .doing {
   padding-bottom: 120px;
