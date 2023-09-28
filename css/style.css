@@ -281,13 +281,13 @@ ol {
   .list-title {
     text-align: left;
   }
+}
 
 @media only screen and (min-width: 1158px) {
   .list-title {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
-    
   }
 }
 .list-text {
@@ -298,37 +298,42 @@ ol {
   color: var(--contacts-color);
 }
 @media only screen and (min-width: 1158px) {
-  .list-text{
- font-weight: 400;
+  .list-text {
+    font-weight: 400;
   }
-  
 }
 
-
 /* =====================DOING=================== */
+@media only screen and (max-width: 1157px) {
+  .doing {
+    display: none;
+  }
+}
 .doing {
   padding-bottom: 120px;
 }
-.doing .container {
-  flex-direction: column;
-}
+
 .title-doing {
   margin-bottom: 72px;
   color: var(--text-color);
   text-align: center;
   font-size: 36px;
   font-weight: 700;
-  line-height: 1, 1; /* 111.111% */
+  line-height: 1.1; /* 111.111% */
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
 .list-doing {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 72px;
+  column-gap: 24px;
 }
-.list-item-doing {
+/* .list-item-doing {
   width: calc((100% - 48px) / 3);
-}
+} */
 
 .title {
   font-size: 36px;
@@ -345,9 +350,7 @@ ol {
   background-color: #f4f4fd;
   padding: 120px 0;
 }
-.teams .container {
-  flex-direction: column;
-}
+
 .title-team {
   margin-bottom: 72px;
   color: var(--text-color);
@@ -364,16 +367,32 @@ ol {
 
 .list-team {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 72px;
+  column-gap: 24px;
 }
+
 .list-item-team {
-  width: calc((100%-72px) / 4);
+  /* width: calc((100%-72px) / 4); */
   border-radius: 0 0 4px 4px;
   background: var(--WHITE, #fff);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+@media only screen and (min-width: 768px) {
+  .list-item-team {
+    width: calc((100%-24px) / 2);
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .list-item-team {
+    width: calc((100%-72px) / 4);
+  }
+}
+
 .card-content {
   padding: 32px 0;
 }
