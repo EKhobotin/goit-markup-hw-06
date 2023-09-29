@@ -50,8 +50,8 @@ ol {
   /* width: 1158px;
   padding: 0 15px;
   align-items: center; */
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 @media only screen and (min-width: 768px) {
   .container {
