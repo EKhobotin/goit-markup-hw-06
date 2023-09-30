@@ -50,8 +50,8 @@ ol {
   /* width: 1158px;
   padding: 0 15px;
   align-items: center; */
-  /* outline: 2px solid red;
-  outline-offset: -2px; */
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 @media only screen and (min-width: 768px) {
   .container {
@@ -311,12 +311,12 @@ ol {
 /* ================FEATURES============== */
 /* Mobile */
 .features {
-  padding: 48px 0;
+  padding: 96px 0;
 }
 
 @media only screen and (min-width: 1158px) {
   .features {
-    padding: 60px 0;
+    padding: 120px 0;
   }
 }
 
@@ -435,7 +435,12 @@ ol {
 /* ==================TEAM============= */
 .teams {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  padding: 96px 0;
+}
+@media only screen and (min-width: 1158px) {
+  .teams {
+    padding: 120px 0;
+  }
 }
 
 .title-team {
@@ -523,8 +528,14 @@ ol {
 }
 /* ===================CUSTOMER================= */
 .customer {
-  padding: 120px 0;
+  padding: 96px 0;
 }
+@media only screen and (min-width: 1158px) {
+  .customer {
+    padding: 120px 0;
+  }
+}
+
 .customer-title {
   text-align: center;
   color: var(--bg-color-section);
