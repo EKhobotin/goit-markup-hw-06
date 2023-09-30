@@ -30,6 +30,9 @@ img {
   height: auto;
 }
 
+section {
+  margin: 0;
+}
 .list,
 ul,
 ol {
@@ -50,8 +53,8 @@ ol {
   /* width: 1158px;
   padding: 0 15px;
   align-items: center; */
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 @media only screen and (min-width: 768px) {
   .container {
@@ -185,10 +188,19 @@ ol {
   display: flex;
   gap: 40px;
 }
+
 @media only screen and (max-width: 1157px) {
   .contact-list {
     display: block;
-    gap: 12px;
+  }
+  .contact-list-item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+@media only screen and (max-width: 1157px) {
+  .contact-item:not(:last-child) {
+    margin-bottom: 120px;
   }
 }
 
@@ -281,7 +293,7 @@ ol {
 @media only screen and (min-width: 768px) {
   .text-hero {
     font-size: 56px;
-    font-weight: 1.07;
+    line-height: 1.07;
   }
 }
 
@@ -552,6 +564,7 @@ ol {
 .customer-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   column-gap: 16px;
   row-gap: 72px;
 }
@@ -566,7 +579,8 @@ ol {
 }
 @media only screen and (min-width: 768px) {
   .customer-list-item {
-    width: calc((100% - 48px) / 3);
+    /* width: calc((100% - 48px) / 3); */
+    width: 168px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -689,7 +703,8 @@ ol {
   background-color: var(--bg-color-section);
   padding: 100px 0;
 }
-.footer .container {
+
+.container-footer {
   padding: 0 15px;
   /* display: flex;
   flex-wrap: wrap;
@@ -698,20 +713,26 @@ ol {
   row-gap: 72px; */
 }
 
-@media only screen and (min-width: 768px) {
-  .footer .container {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .container-footer {
+    width: 558px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: baseline;
     column-gap: 24px;
     row-gap: 72px;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 @media only screen and (min-width: 1158px) {
-  .footer .container {
+  .container-footer {
+    display: flex;
+    max-width: 1158px;
     column-gap: 0px;
-    justify-content: flex-start;
+    justify-content: center;
+    margin: 0 auto;
   }
 }
 
@@ -846,6 +867,7 @@ ol {
   }
 }
 .subscribe-input {
+  display: block;
   max-width: 398px;
   width: 100%;
   margin: 0 auto 16px;
@@ -916,6 +938,7 @@ ol {
   visibility: hidden;
   pointer-events: none;
 }
+
 .modal {
   position: absolute;
   top: 50%;
@@ -930,6 +953,13 @@ ol {
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media only screen and (max-width: 767.9px) {
+  .modal {
+    max-width: 392px;
+  }
+}
+
 .modal-btn {
   position: absolute;
   top: 24px;
