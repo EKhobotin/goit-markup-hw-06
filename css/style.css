@@ -780,6 +780,12 @@ ol {
 }
 
 @media only screen and (min-width: 1158px) {
+  .footer-text {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
   .container-social {
     margin-right: 80px;
   }
@@ -944,7 +950,7 @@ ol {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  max-width: 408px;
+  width: 408px;
   min-height: 584px;
   padding: 72px 24px 24px;
   background: #fcfcfc;
